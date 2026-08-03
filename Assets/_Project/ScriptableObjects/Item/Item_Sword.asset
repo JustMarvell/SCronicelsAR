@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15142afbaaae98173ada8cb45aa78e41, type: 3}
   m_Name: Item_Sword
   m_EditorClassIdentifier: Assembly-CSharp::Scar.Data.ItemDefinition
-  ItemId: 
-  DisplayName: 
-  EquippableWeapon: {fileID: 0}
+  ItemId: item_sword
+  DisplayName: Test Sword
+  EquippableWeapon: {fileID: 11400000, guid: f225d0d28939d5029a0bfa16e87e373a, type: 2}

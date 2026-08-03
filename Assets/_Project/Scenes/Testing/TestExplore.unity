@@ -241,8 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4247ee7091cc23c84abfbb40a05c8a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scar.Inventory.ItemPickup
-  m_PickupId: test_pickup_id_1
-  m_ItemId: test_item_1
+  m_PickupId: item_sword
+  m_Item: {fileID: 11400000, guid: ba92f3e3964f777dc910473c4cb25097, type: 2}
 --- !u!65 &281119897
 BoxCollider:
   m_ObjectHideFlags: 0

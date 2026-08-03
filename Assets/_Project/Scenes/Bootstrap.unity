@@ -402,7 +402,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a22876de6b137ea890c721ac7445ee1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scar.Inventory.EquipmentManager
-  m_AllWeapons: []
+  m_AllWeapons:
+  - {fileID: 11400000, guid: f225d0d28939d5029a0bfa16e87e373a, type: 2}
+  - {fileID: 11400000, guid: 4ca37a057b238c3f4b62aac2d1c13ddd, type: 2}
 --- !u!114 &1439404223
 MonoBehaviour:
   m_ObjectHideFlags: 0
