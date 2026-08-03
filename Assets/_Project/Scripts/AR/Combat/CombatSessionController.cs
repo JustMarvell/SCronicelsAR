@@ -5,7 +5,6 @@ namespace Scar.AR.Combat
 {
     public class CombatSessionController : MonoBehaviour
     {
-        [SerializeField] WeaponDefinition m_TestWeapon; // TODO: replace with EquipmentManager query (Phase 7)
         [SerializeField] EnemyCombatant m_TestEnemy;    // TODO: resolve via GameContext.EnemyId
         [SerializeField] MeleeWeaponController m_MeleeController;
         [SerializeField] RangedWeaponController m_RangedController;
@@ -14,12 +13,13 @@ namespace Scar.AR.Combat
 
         void OnEnable()
         {
-            m_Active = m_TestWeapon.Type == WeaponType.Melee
+            var weapon = Scar.Inventory.EquipmentManager.Instance.EquippedWeapon;
+            m_Active = weapon.Type == WeaponType.Melee
                 ? m_MeleeController
                 : (IWeaponController)m_RangedController;
 
             ((MonoBehaviour)m_Active).gameObject.SetActive(true);
-            m_Active.EnterCombat(m_TestEnemy, m_TestWeapon);
+            m_Active.EnterCombat(m_TestEnemy, weapon);
         }
 
         void Update() => m_Active?.Tick();

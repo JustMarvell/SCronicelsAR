@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Scar.Core;
 
 namespace Scar.Exploration
@@ -22,7 +23,8 @@ namespace Scar.Exploration
             {
                 RequestedMode = GameMode.AR,
                 EnemyId = m_EnemyId,
-                WeaponId = m_WeaponId
+                WeaponId = m_WeaponId,
+                TargetSceneName = SceneManager.GetActiveScene().name
             });
         }
     }

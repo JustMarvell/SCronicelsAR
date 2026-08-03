@@ -300,8 +300,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1439404218}
+  - component: {fileID: 1439404221}
   - component: {fileID: 1439404217}
   - component: {fileID: 1439404216}
+  - component: {fileID: 1439404220}
+  - component: {fileID: 1439404219}
+  - component: {fileID: 1439404223}
+  - component: {fileID: 1439404222}
   m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
@@ -349,6 +354,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1439404219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439404215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e764eb9a0ed146270a3e8a29e9eb1db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scar.SaveSystem.SaveManager
+--- !u!114 &1439404220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439404215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a193e0fed95d34f690697a838578a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scar.SaveSystem.CheckpointManager
+--- !u!114 &1439404221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439404215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a2a84e971f8304d9f49dc7e906e37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PersistentFlags
+--- !u!114 &1439404222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439404215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a22876de6b137ea890c721ac7445ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scar.Inventory.EquipmentManager
+  m_AllWeapons: []
+--- !u!114 &1439404223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439404215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 463d5db4b770eaf9f932ebf209d06291, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scar.Inventory.InventoryManager
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
