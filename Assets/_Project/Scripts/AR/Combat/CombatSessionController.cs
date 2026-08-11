@@ -14,6 +14,8 @@ namespace Scar.AR.Combat
         void OnEnable()
         {
             var weapon = Scar.Inventory.EquipmentManager.Instance.EquippedWeapon;
+            if (weapon == null) { Debug.LogWarning("No weapon equipped."); enabled = false; return; }
+
             m_Active = weapon.Type == WeaponType.Melee
                 ? m_MeleeController
                 : (IWeaponController)m_RangedController;
