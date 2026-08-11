@@ -36,7 +36,10 @@ namespace Scar.Core
         IEnumerator SwitchRoutine(string targetScene, GameContext context)
         {
             yield return SceneLoader.Instance.SwitchScene(m_CurrentSceneName, targetScene);
-            yield return SceneLoader.Instance.UnloadAllExcept("Bootstrap", targetScene);
+
+            if (context.RequestedMode == GameMode.Explore)
+                yield return SceneLoader.Instance.UnloadAllExcept("Bootstrap", targetScene);
+
             m_CurrentSceneName = targetScene;
             m_CurrentMode = context.RequestedMode;
             EventBus.Publish(new GameModeChangedEvent { NewMode = m_CurrentMode, Context = context });
