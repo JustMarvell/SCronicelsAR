@@ -23,10 +23,14 @@ namespace Scar.AR.Combat
         void ReturnToExplore()
         {
             var ctx = m_ArSession.ActiveContext;
+            Scar.SaveSystem.PersistentFlags.Instance.SetFlag($"encounter_{ctx.EnemyId}");
             GameModeController.Instance.RequestModeSwitch(new GameContext
             {
                 RequestedMode = GameMode.Explore,
-                TargetSceneName = ctx.TargetSceneName
+                TargetSceneName = ctx.TargetSceneName,
+                HasReturnPosition = ctx.HasReturnPosition,
+                ReturnPosition = ctx.ReturnPosition,
+                ReturnRotation = ctx.ReturnRotation
             });
         }
     }

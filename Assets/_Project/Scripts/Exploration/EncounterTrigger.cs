@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Scar.Core;
 
 namespace Scar.Exploration
@@ -13,6 +12,12 @@ namespace Scar.Exploration
 
         bool m_Triggered;
 
+        void Start()
+        {
+            if (Scar.SaveSystem.PersistentFlags.Instance.HasFlag($"encounter_{m_EnemyId}"))
+                gameObject.SetActive(false);
+        }
+
         void OnTriggerEnter(Collider other)
         {
             if (m_Triggered && m_TriggerOnce) return;
@@ -24,7 +29,10 @@ namespace Scar.Exploration
                 RequestedMode = GameMode.AR,
                 EnemyId = m_EnemyId,
                 WeaponId = m_WeaponId,
-                TargetSceneName = SceneManager.GetActiveScene().name
+                TargetSceneName = GameModeController.Instance.CurrentSceneName,
+                HasReturnPosition = true,
+                ReturnPosition = other.transform.position,
+                ReturnRotation = other.transform.rotation
             });
         }
     }

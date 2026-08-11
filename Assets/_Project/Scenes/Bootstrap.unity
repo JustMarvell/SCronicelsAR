@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &527868345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,6 +307,7 @@ GameObject:
   - component: {fileID: 1439404219}
   - component: {fileID: 1439404223}
   - component: {fileID: 1439404222}
+  - component: {fileID: 1439404224}
   m_Layer: 0
   m_Name: Core
   m_TagString: Untagged
@@ -417,6 +418,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 463d5db4b770eaf9f932ebf209d06291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Scar.Inventory.InventoryManager
+--- !u!114 &1439404224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439404215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e1ae82c884839848c85bdd367b5bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scar.Core.AppBootstrapper
+  m_FirstSceneName: MainMenu
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -14,6 +14,7 @@ namespace Scar.Core
         public static GameModeController Instance { get; private set; }
 
         [SerializeField] string m_ARSceneName = "AR_Session";
+        public string CurrentSceneName => m_CurrentSceneName;
 
         GameMode m_CurrentMode = GameMode.Explore;
         string m_CurrentSceneName;
@@ -35,6 +36,7 @@ namespace Scar.Core
         IEnumerator SwitchRoutine(string targetScene, GameContext context)
         {
             yield return SceneLoader.Instance.SwitchScene(m_CurrentSceneName, targetScene);
+            yield return SceneLoader.Instance.UnloadAllExcept("Bootstrap", targetScene);
             m_CurrentSceneName = targetScene;
             m_CurrentMode = context.RequestedMode;
             EventBus.Publish(new GameModeChangedEvent { NewMode = m_CurrentMode, Context = context });
